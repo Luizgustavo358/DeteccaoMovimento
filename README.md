@@ -21,4 +21,5 @@ Referências:
 - [PandoraLab](https://pandoralab.com.br/tutorial/tutorial-alarme-feito-com-pir-sensor-de-presenca/) - Alarme feito com PIR (sensor de presença)
 - [AutoCore blog](http://autocorerobotica.blog.br/aprenda-a-utilizar-o-sensor-de-presenca-pir-com-arduino/) - Aprenda a utilizar o sensor de preseça pir com Arduino.
 
-Enjoy it :+1:
+Enjoy it :+1::skin-tone-5:
+:octocat:
