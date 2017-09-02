@@ -30,6 +30,7 @@ void loop()
      0 se nao detectar nada */
   valorSensorPIR = digitalRead(pinoSensor);
 
+  // verifica se houve movimento
   if(valorSensorPIR == 1)
   {
     alarmeOn();
@@ -40,9 +41,22 @@ void loop()
   }// end if
 }// end loop()
 
+/**
+ * Metodo alarmeOn() - liga o alarme e o led vermelho.
+ */
 void alarmeOn()
 {
+  // liga o led vermelho
+  digitalWrite(ledVermelho, HIGH);
 
+  // toca o alarme, com frequencia de 1500 hz
+  tone(somAlarme, 1500);
+
+  // tempo que o alarme fica tocando 3 minutos
+  delay(180000);
+
+  // desliga o alarme
+  alarmeOff();
 }// end alarmeOn()
 
 void alarmeOff()
