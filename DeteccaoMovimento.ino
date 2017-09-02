@@ -59,7 +59,14 @@ void alarmeOn()
   alarmeOff();
 }// end alarmeOn()
 
+/**
+ * Metodo alarmeOff() - desliga o alarme.
+ */
 void alarmeOff()
 {
+  // desliga o led
+  digitalWrite(ledVermelho, LOW);
 
+  // desliga o alarme
+  noTone(somAlarme);
 }// end alarmeOff()
