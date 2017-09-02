@@ -33,10 +33,12 @@ void loop()
   // verifica se houve movimento
   if(valorSensorPIR == 1)
   {
+    // chama o metodo para ligar o alarme
     alarmeOn();
   }
   else
   {
+    // chama o metodo para desligar o alarme
     alarmeOff();
   }// end if
 }// end loop()
