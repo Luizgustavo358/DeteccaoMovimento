@@ -12,7 +12,7 @@ Sensores usados:
 - Sensor de Movimentos/Presença PIR
 - RTC DS1302 (ainda não implementado) =/
 
-Links:
+Referências:
 ---
 - [Arduino](https://www.arduino.cc/) - Site do Arduino.
 - [Como Fazer as Coisas](http://www.comofazerascoisas.com.br/como-fazer-um-alarme-com-arduino-sensor-de-movimentos-pir.html) - Tutorial de como fazer alarme com Arduino e sensor de movimentos PIR.
