@@ -22,4 +22,3 @@ Referências:
 - [AutoCore blog](http://autocorerobotica.blog.br/aprenda-a-utilizar-o-sensor-de-presenca-pir-com-arduino/) - Aprenda a utilizar o sensor de preseça pir com Arduino.
 
 Enjoy it :+1:
-:octocat:
