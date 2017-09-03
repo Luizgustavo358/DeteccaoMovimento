@@ -4,12 +4,21 @@
  * Desenvolvido por: Luiz Gustavo
  */
 
+// incluindo biblioteca virtuabotixRTC
+#include <virtuabotixRTC.h>
+
 // declaracao das portas digitais
 int pinoSensor  = 4;
 int ledVermelho = 6;
 int pinoAlarme  = 7;
 int somAlarme   = 8;
+int dataRTC     = 4;
+int resetRTC    = 9;
+int clkRTC      = 5;
 int valorSensorPIR = 0;
+
+// determina os pinos ligados ao modulo
+virtuabotixRTC myRTC(clkRTC, dataRTC, resetRTC);
 
 void setup()
 {
@@ -21,6 +30,11 @@ void setup()
 
   // som do alarme
   pinMode(somAlarme, OUTPUT);
+
+  // Informacoes iniciais de data e hora
+  // Apos setar as informacoes, comente a linha abaixo
+  // (segundos, minutos, hora, dia da semana, dia do mes, mes, ano)
+  myRTC.setDS1302Time(00, 00, 08, 1, 03, 09, 2017); // 08:00 03/09/17 DOMINGO
 }// end setup()
 
 void loop()
@@ -30,8 +44,11 @@ void loop()
      0 se nao detectar nada */
   valorSensorPIR = digitalRead(pinoSensor);
 
+  // le as informacoes do CI
+  myRTC.updateTime();
+
   // verifica se houve movimento
-  if(valorSensorPIR == 1)
+  if((valorSensorPIR == 1) && (myRTC.hours >= 22) && (myRTC.hours < 8))
   {
     // chama o metodo para ligar o alarme
     alarmeOn();
@@ -41,6 +58,9 @@ void loop()
     // chama o metodo para desligar o alarme
     alarmeOff();
   }// end if
+
+  // faz um delay de 1 seg
+  delay(1000);
 }// end loop()
 
 /**
