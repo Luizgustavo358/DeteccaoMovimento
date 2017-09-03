@@ -10,7 +10,7 @@ Sobre
 Sensores usados:
 ---
 - Sensor de Movimentos/Presença PIR
-- RTC DS1302 (ainda não implementado) =/
+- RTC DS1302
 
 Referências:
 ---
